@@ -1,0 +1,9 @@
+span {
+  &:first-child {
+    color: grey;
+  }
+
+  &:last-child {
+    color: grey;
+  }
+}
