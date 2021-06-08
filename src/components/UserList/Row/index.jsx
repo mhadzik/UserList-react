@@ -1,7 +1,8 @@
 import React from "react";
-import "./Row.scss"
+import "./Row.scss";
+import PropTypes from "prop-types";
 
-export default function Row({ name, username, id }) {
+const Row = React.memo(({ name, username, id }) => {
   return (
     <tr>
       <td>
@@ -11,4 +12,12 @@ export default function Row({ name, username, id }) {
       </td>
     </tr>
   );
-}
+});
+
+Row.propTypes = {
+  name: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+  username: PropTypes.string.isRequired,
+};
+
+export default Row;

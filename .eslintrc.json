@@ -14,12 +14,13 @@
     },
     "sourceType": "module"
   },
-  "plugins": ["react"],
+  "plugins": ["react", "react-hooks"],
   "rules": {
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
     "indent": ["error", 2],
-    "no-control-regex": 0
+    "no-control-regex": 0,
+    "react-hooks/exhaustive-deps": 0
   },
   "globals": {
     "require": true,

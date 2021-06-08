@@ -1,6 +1,8 @@
 import React from "react";
 import "./Search.scss";
-export default function Search({ onSearch }) {
+import PropTypes from "prop-types";
+
+const Search = React.memo(({ onSearch }) => {
   return (
     <div>
       <input
@@ -11,4 +13,10 @@ export default function Search({ onSearch }) {
       />
     </div>
   );
-}
+});
+
+Search.propTypes = {
+  onSearch: PropTypes.func.isRequired,
+};
+
+export default Search;
