@@ -59,7 +59,7 @@ const UserList = React.memo(() => {
 UserList.propTypes = {
   errorValue: PropTypes.string,
   data: PropTypes.array || null || undefined,
-  fetchData: PropTypes.func.isRequired,
+  fetchData: PropTypes.func,
 };
 
 export default UserList;
