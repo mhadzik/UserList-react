@@ -2,6 +2,11 @@ import React from "react";
 import "./Search.scss";
 import PropTypes from "prop-types";
 
+/*
+Component used for searching purposes.
+Requires the function for searching.
+*/
+
 const Search = React.memo(({ onSearch }) => {
   return (
     <div>

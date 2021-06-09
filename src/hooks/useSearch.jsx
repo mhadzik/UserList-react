@@ -1,5 +1,9 @@
 import { useState, useCallback } from "react";
-
+/*
+Reusable Searching functionality
+Required to pass the data and keys for searching purposes.
+Returns the array of objects with search results.
+*/
 
 const useSearch = (data, searchKeys) => {
   const [searchResults, setSearchResults] = useState(data);

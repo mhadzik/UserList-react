@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+/*
+Context API created for fetching data from the server. 
+Reusable in any component.
+Returns the data from API call, function for fetching data and error message.
+*/
+
 const DataContext = React.createContext({
   data: null,
   fetchData: () => {},

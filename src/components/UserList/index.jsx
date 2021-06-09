@@ -7,6 +7,10 @@ import Search from "./Search";
 import { DataContext } from "../../context/data-context";
 import PropTypes from "prop-types";
 
+/*
+Component for rendering userlist from dataset provided from context API and searching through that data.
+*/
+
 const UserList = React.memo(() => {
   const data = useContext(DataContext).data;
   const errorValue = useContext(DataContext).errorValue;
@@ -19,14 +23,14 @@ const UserList = React.memo(() => {
   }, []);
 
   useEffect(() => {
-    if (data !== null && data !== undefined && !errorValue) {
+    if (data && !errorValue) {
       onSearch();
     }
   }, [data]);
 
   let content = <Spinner />;
 
-  if (data !== null && data !== undefined && !errorValue) {
+  if (data && !errorValue) {
     const rowsToDisplay = searchResults?.map((item, i) => (
       <Row key={i} id={i + 1} name={item.name} username={item.username} />
     ));
